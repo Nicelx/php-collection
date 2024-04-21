@@ -53,5 +53,82 @@
 
 	?>
 	<p>hi <?php echo $string ?></p>
+	<hr>
+	<?php 
+		//string operator
+		$a = "hi ";
+		$b = "and bye";
+		$c = $a . $b;
+		echo "c " . $c . "<br>";
+
+		// Arithmetic operator
+		echo 1 + 2;
+		echo 1 % 2;
+		echo 10 ** 3 . "<br>";
+		$aa = 2;
+		$aa += 4;
+		echo $aa;
+		// Comparison operator
+		$ca = 2;
+		$cb = "2";
+		if ($ca == $cb) {
+			echo "<br> this is true";
+		} else {
+			echo "<br> this is false";
+		}
+		//logical operators
+		$la = 4;
+		$lb = 4;
+
+		$ca = 2;
+		$cd = 6;
+
+		if ($la == $lb and $ca == $cd) {
+			echo "<br> this with and is true";
+		} 
+		if ($la == $lb or $ca == $cd) {
+			echo "<br> this with or is true";
+		} 
+
+		// incrementing-decrementing
+
+		$ia = 1;
+		echo "<br>" . ++$ia;
+		echo "<br>" . $ia++ . " " . $ia;
+		
+
+	?>
+	<hr>
+	conditions
+	<?php 
+		$bool = true;
+		$a = 1;
+		$b = 4;
+
+		$result = match ($a) {
+			1,3,5 => "Variable a is 1",
+			2 => "Variable a is 2",
+			default => "Default",
+		};
+
+		echo "<br>result is " . $result . "<br>";
+
+		switch ($a) {
+			case 1: echo "The first case is correct";
+			break;
+			case 3: echo "The second case is correct";
+			break;
+			default: echo "None of the cases were true";
+		}
+
+		if ($a < $b && !$bool) {
+			echo "First condition is true";
+		}
+		else if ($a < $b && !$bool) {
+			echo "Second condition is true";
+		} else {
+			echo "None of the conditions were true!";
+		}
+	?>
 </body>
 </html>
