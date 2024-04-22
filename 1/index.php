@@ -130,5 +130,59 @@
 			echo "None of the conditions were true!";
 		}
 	?>
+	<hr>
+	arrays
+	<?php 
+		// $fruits = array("apple", "Banana", "Cherry");
+		$fruits = ["apple", "Banana", "Cherry"];
+		echo $fruits[0];
+		$fruits[] = "Orange ";
+		echo $fruits[3];
+		$fruits[3] = "New Orange ";
+		echo $fruits[3];
+
+		// unset($fruits[1]); //delete 
+		// array_splice($fruits, 0,1);
+
+		echo $fruits[1];
+		echo "<br>";
+
+		$tasks = [
+			"laundry" => "Daniel",
+			"trash" => "Frida",
+			"vacuum" => "Basse",
+			"dishes" => "Bella"
+		];
+		echo "laundy is for " . $tasks["laundry"] . "<br>";
+		print_r($tasks);
+		echo "<br>count is " . count($tasks);
+		// sort($tasks);
+		print_r($tasks);
+
+		array_push($fruits, "Mango"); // only for index arrays
+		print_r($fruits);
+
+		$tasks["dustion"] = "Tara";
+		print_r($tasks);
+
+		array_splice($fruits, 1, 0,"Pine");
+		print_r($fruits);
+
+
+		echo "<br>";
+		$test = ["Strawberry", "Melon"];
+		array_splice($fruits, 1, 0,$test);
+		print_r($fruits);
+		echo '<br>';
+
+		$food = [array("apple", "mango"), "Banana", "Cherry"];
+		echo $food[0][0] . "<br>";
+		$food = [
+			"fruits" => array("apple", "banana", "cherry"),
+			"meat" => array("chicken", "fish", "sheep"), 
+			"vegetables" => array("cucumber", "carrot"), 
+			];
+		echo $food["vegetables"][0];
+	?>
 </body>
 </html>
