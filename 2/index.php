@@ -1,3 +1,7 @@
+<?php 
+	declare(strict_types = 1);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +47,25 @@
 		echo time() . "<br>";
 		echo strtotime($date) . "<br>";
 		
+		// function sayHello($name = "default") {
+		// 	return "Hello " . $name . "world";
+		// }
+		function sayHello(string $name = "default") {
+			return "Hello " . $name . "world";
+		}
+		$test = sayHello('nicel'); // or without args
+		// $test2 = sayHello(123);
+		echo $test;
+		echo $test2;
+		$scopeTest = 'global scope';
+		function calculator(int $num1, int $num2) {
+			$result = $num1 + $num2;
+			global $scopeTest; // get access to global variable
+			return $result;
+		}
+		echo calculator(2,4);
 
+		
 
 	?>
 </body>
