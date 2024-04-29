@@ -63,6 +63,29 @@
 	while ($boolean) {
 		$boolean = false;
 	}
+	while ($test < 10) {
+		$test++;
+		echo $test;
+	}
+
+	do {
+		echo "do white " . $test;
+		$test--;
+	} while ($test > 0);
+
+	$fruits = ['apple' => "red", 'banana' => "yellow", 'strawberry' => "orange"];
+
+	// loop for values
+	foreach ($fruits as $fruit) {
+		echo '<br>' . $fruit;
+	}
+	echo "loop for keys <br>";
+	foreach ($fruits as $fruit => $color) {
+		echo '<br>' . $fruit . 'hast a color of ' . $color;
+	}
+
+
+
 	?>
 
 </body>
