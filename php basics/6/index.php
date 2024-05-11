@@ -11,7 +11,14 @@ require_once 'config.php';
 </head>
 
 <body>
+	<h3>Signup</h3>
 
+	<form action="includes/formhandler.inc.php" method="post">
+		<input type="text" name="username" placeholder="Username">
+		<input type="password" name="pwd" placeholder="Password">
+		<input type="text" name="email" placeholder="E-mail">
+		<button>Signup</button>
+	</form>
 </body>
 
 </html>
